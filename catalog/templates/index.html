@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+{% block title %}<title>Home Biblioteca Local</title>{% endblock %}
+{% block content %}
+<h1>Home Biblioteca Local</h1>
+
+  <p>Bienvenido a <em>LocalLibrary</em>, un sitio web básico de ejemplo con Django.</p>
+
+<h2>Contenido Dinámico</h2>
+
+  <p>La Biblioteca cuenta con los siguientes regístros:</p>
+  <ul>
+    <li><strong>Libros:</strong> {{ num_books }}</li>
+    <li><strong>Copias:</strong> {{ num_instances }}</li>
+    <li><strong>Copias disponíbles:</strong> {{ num_instances_available }}</li>
+    <li><strong>Autores:</strong> {{ num_authors }}</li>
+    <li><strong>Libros con titulo que contiene la palabra soledad:</strong> {{ number_soledad_books }}</li>
+    <li><strong>Libro de ficción:</strong> {{ number_genre }}</li>
+  </ul>
+
+  <p>Se ha visitado esta página {{ num_visits }}{% if num_visits == 1 %} time{% else %} veces{% endif %}.</p>
+
+{% endblock %}
